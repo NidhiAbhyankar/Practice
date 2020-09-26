@@ -8,6 +8,14 @@ public:
                 return i;
         }
         return nums.size();
-        
+
+
+
+        //Another solution
+        int index=nums.size();
+        if(target>nums[index-1])
+        	return nums.size();
+        else
+        	return lower_bound(nums.begin(),nums.end(),target)-nums.begin();
     }
 };
