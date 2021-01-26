@@ -1,5 +1,7 @@
-#include <bits/stdc++.h>;
+#include <iostream>
+
 using namespace std;
+
 
 bool check(int x,int y, int z){
  int a,b,c;
@@ -24,7 +26,7 @@ bool check(int x,int y, int z){
 
 }
 
-__int128_t main(){
+int main(){
  int x,y,z;
  cin >> x >> y >> z;
 
@@ -35,5 +37,6 @@ __int128_t main(){
  {
   cout<<"Not a Pythagorian Triplet";
  }
+ 
  
 }
