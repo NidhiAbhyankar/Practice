@@ -46,17 +46,76 @@ using namespace std;
 // }
 
 //power of a number using recurrsion
-int powerRecurrsion(int n,int p){
- if(p==0)
- return 1;
- int power=powerRecurrsion(n,p-1);
- return n*power;
-} 
+// int powerRecurrsion(int n,int p){
+//  if(p==0)
+//  return 1;
+//  int power=powerRecurrsion(n,p-1);
+//  return n*power;
+// } 
+
+
+//prime no using sieve of eratosthenes
+// void primeNo(int n){
+//  int arr[100]={0};
+ 
+//  for(int i=2;i<=n;i++){
+  
+//     if(arr[i]==0){
+//      for(int j=i*i;j<=n;j+=i){
+//       arr[j]=1;
+//      }
+//     }
+    
+//  }
+//  for(int i=2;i<=n;i++){
+//   if(!arr[i])
+//    cout<<i<<" ";
+//  }
+ 
+// }
+
+//prime factors of a number
+// void primeFactor(int n){
+//  int arr[100]={0};
+//  for(int i=2;i<=n;i++)
+//   arr[i]=i;
+
+//  for(int i=2;i<=n;i++){
+//   if(arr[i]==i){
+//    for(int j=i*i;j<=n;j+=i){
+//     if(arr[j]==j)
+//      arr[j]=i;
+//    }
+//   }
+//  }
+
+//  while(n!=1){
+//   cout<<arr[n]<<" ";
+//   n=n/arr[n];
+//  }
+// }
+
+//GCD
+void GCD(int a,int b){
+  
+
+  while(b!=0){
+    int rem=a%b;
+    a=b;
+    b=rem;
+  }
+  cout<<a;
+}
+
 
 int main(){
  int n,p;
- cin>>n>>p;
- cout<<powerRecurrsion(n,p);
+ int a,b;
+ cin>>a>>b;
+ GCD(a,b);
+ // primeFactor(n);
+ // primeNo(n);
+ // cout<<powerRecurrsion(n,p);
  // cout<<sumRecurrsion(n);
  // pascalTriangle(n);
  // fibonacci(n);
