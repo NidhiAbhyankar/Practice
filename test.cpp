@@ -2,13 +2,13 @@
 using namespace std;
 
 //factorial
-int factorial(int n){
- int fact=1;
- for(int i=2;i<=n;i++){
-  fact*=i;
- }
- return fact;
-}
+// int factorial(int n){
+//  int fact=1;
+//  for(int i=2;i<=n;i++){
+//   fact*=i;
+//  }
+//  return fact;
+// }
 
 
 //fibonacci
@@ -26,20 +26,39 @@ int factorial(int n){
 // }
 
 //pascal Triangle
-void pascalTriangle(int n){
- for(int i=0;i<n;i++){
-  for(int j=0;j<=i;j++){
-   int pascal=factorial(i)/(factorial(i-j)*factorial(j));
-   cout<<pascal<<" ";
-  }
-  cout<<endl;
- }
-}
+// void pascalTriangle(int n){
+//  for(int i=0;i<n;i++){
+//   for(int j=0;j<=i;j++){
+//    int pascal=factorial(i)/(factorial(i-j)*factorial(j));
+//    cout<<pascal<<" ";
+//   }
+//   cout<<endl;
+//  }
+// }
+
+
+//Sum using recurrsion
+// int sumRecurrsion(int n){
+//  if(n==1)
+//   return 1;
+//  int sum=sumRecurrsion(n-1);
+//  return n+sum;
+// }
+
+//power of a number using recurrsion
+int powerRecurrsion(int n,int p){
+ if(p==0)
+ return 1;
+ int power=powerRecurrsion(n,p-1);
+ return n*power;
+} 
 
 int main(){
- int n;
- cin>>n;
- pascalTriangle(n);
+ int n,p;
+ cin>>n>>p;
+ cout<<powerRecurrsion(n,p);
+ // cout<<sumRecurrsion(n);
+ // pascalTriangle(n);
  // fibonacci(n);
  // factorial(n);
 }
